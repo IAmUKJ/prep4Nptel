@@ -39,7 +39,7 @@ const CourseDetails = () => {
 
     const fetchMaterials = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/courses/${courseCode}`);
+        const { data } = await axios.get(`https://prep4nptel.onrender.com/api/courses/${courseCode}`);
         if (!isMounted) return;
 
         const processedMaterials = (data.materials || []).map(({ id, title, description, weekNumber, url, type, languages }) => ({

@@ -13,7 +13,7 @@ function CoursesList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/courses')
+    axios.get('https://prep4nptel.onrender.com/api/courses')
       .then(response => {
         const coursesData = response.data.courses || [];
         setCourses(coursesData);
@@ -38,7 +38,7 @@ function CoursesList() {
   const handleRetry = () => {
     setLoading(true);
     setError(null);
-    axios.get('http://localhost:5000/api/courses')
+    axios.get('https://prep4nptel.onrender.com/api/courses')
       .then(response => {
         const coursesData = response.data.courses || [];
         setCourses(coursesData);

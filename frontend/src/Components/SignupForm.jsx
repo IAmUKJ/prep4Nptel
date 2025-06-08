@@ -30,7 +30,7 @@ const SignupForm = () => {
 
     try {
       // Fetch existing users
-      const res = await fetch('http://localhost:5000/api/auth/users');
+      const res = await fetch('https://prep4nptel.onrender.com/api/auth/users');
       if (!res.ok) throw new Error('Failed to fetch existing users');
       const users = await res.json();
 
@@ -43,7 +43,7 @@ const SignupForm = () => {
       }
 
       // Signup new user
-      const signupRes = await fetch('http://localhost:5000/api/auth/signup', {
+      const signupRes = await fetch('https://prep4nptel.onrender.com/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: email, password }),

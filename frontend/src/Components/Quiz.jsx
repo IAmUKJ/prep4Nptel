@@ -23,7 +23,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchAssignments = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/courses/${courseCode}`);
+        const res = await axios.get(`https://prep4nptel.onrender.com/api/courses/${courseCode}`);
         const data = res.data;
         console.log(data.assignments);
 
@@ -136,7 +136,7 @@ const Quiz = () => {
 
   try {
     await axios.post(
-      "http://localhost:5000/api/tests/save",
+      "https://prep4nptel.onrender.com/api/tests/save",
       {
         courseCode,
         weekNumber: selectedWeek,
