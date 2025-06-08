@@ -63,7 +63,7 @@ const SignupForm = () => {
       }
 
       setSuccess(true);
-      setTimeout(() => navigate('/login'), 2000);
+      setTimeout(() => navigate(`courses/${courseCode}/login`), 2000);
     } catch (err) {
       setError('Signup failed. Please try again.');
     } finally {
