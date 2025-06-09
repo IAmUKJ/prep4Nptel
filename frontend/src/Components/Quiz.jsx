@@ -131,12 +131,12 @@ const Quiz = () => {
   });
 
   setScore(score);
-  const token = localStorage.getItem("token");
+  const token = sessionStorage.getItem("token");
   console.log("Token being sent:", token);
 
   try {
     await axios.post(
-      "https://prep4nptel.onrender.com/api/tests/save",
+      "http://localhost:5000/api/tests/save",
       {
         courseCode,
         weekNumber: selectedWeek,

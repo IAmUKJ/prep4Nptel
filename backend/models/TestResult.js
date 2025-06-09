@@ -24,7 +24,7 @@ const testResultSchema = new mongoose.Schema({
     required: true,
   },
   userAnswers: {
-  type: Object, // ← change this
+  type: Object,
   required: true,
 },
   timestamp: {

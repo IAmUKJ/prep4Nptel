@@ -6,16 +6,15 @@ export const saveTestResult = async (req, res) => {
     console.log("User:", req.user); // check if user is present
     console.log("Body:", req.body); // log incoming data
     const { courseCode, weekNumber, score, total, userAnswers } = req.body;
-
+    
     const newResult = new TestResult({
-      userId: req.user.id,
+      userId: mongoose.Types.ObjectId.createFromHexString(req.user.id),
       courseCode,
       weekNumber,
       score,
       total,
       userAnswers,
     });
-
     await newResult.save();
     res.status(201).json({ message: "Test result saved", result: newResult });
   } catch (error) {

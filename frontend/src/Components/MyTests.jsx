@@ -47,7 +47,7 @@ const MyTests = () => {
         setUserId(currentUser._id);
         console.log(currentUser._id);
         // Then fetch test results for this user
-        const resultsRes = await axios.get(`https://prep4nptel.onrender.com/api/tests/user/${currentUser._id}`, {
+        const resultsRes = await axios.get(`http://localhost:5000/api/tests/user/${currentUser._id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
