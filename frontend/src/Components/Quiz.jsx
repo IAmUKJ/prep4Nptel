@@ -136,7 +136,7 @@ const Quiz = () => {
 
   try {
     await axios.post(
-      "http://localhost:5000/api/tests/save",
+      "https://prep4nptel.onrender.com/api/tests/save",
       {
         courseCode,
         weekNumber: selectedWeek,
