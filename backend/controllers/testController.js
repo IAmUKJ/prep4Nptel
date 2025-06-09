@@ -8,7 +8,7 @@ export const saveTestResult = async (req, res) => {
     const { courseCode, weekNumber, score, total, userAnswers } = req.body;
 
     const newResult = new TestResult({
-      userId: new mongoose.Types.ObjectId(req.user.id),
+      userId: req.user.id,
       courseCode,
       weekNumber,
       score,
